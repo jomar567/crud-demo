@@ -11,7 +11,7 @@
             </div>
         </div>
         <div>
-            <div class="card text-black">
+            <div class="card shadow">
                 <div class="card-body">
                     <form action={{ route('update', $product->id) }} method="POST">
                         @csrf

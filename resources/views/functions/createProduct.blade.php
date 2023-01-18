@@ -13,31 +13,31 @@
                 </div>
             </div>
             <div>
-                <div class="card text-black">
+                <div class="card shadow">
                     <div class="card-body">
                         <form action={{ route('addNewProduct') }} method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">
-                                    Name
+                                    Product Name
                                 </label>
                                 <input type="text" class="form-control" id="name" name="name">
                             </div>
                             <div class="mb-3">
                                 <label for="description" class="form-label">
-                                    Description
+                                    Product Description
                                 </label>
                                 <input type="text" class="form-control" id="description" name="description">
                             </div>
                             <div class="mb-3">
                                 <label for="price" class="form-label">
-                                    Price
+                                    Product Price
                                 </label>
                                 <input type="number" class="form-control" id="price" name="price">
                             </div>
                             <div class="mb-3">
                                 <label for="quantity" class="form-label">
-                                    Quantity
+                                    Product Quantity
                                 </label>
                                 <input type="number" class="form-control" id="quantity" name="quantity">
                             </div>

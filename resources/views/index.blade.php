@@ -19,7 +19,7 @@
             </div>
         @endif
         <div class="overflow-auto">
-            <table class="table table-light table-striped">
+            <table class="table table-light table-striped shadow">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -30,7 +30,7 @@
                         <th class="text-center">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider">
                     @if(isset($products) > 0)
                         @foreach($products as $product)
                             <tr>
