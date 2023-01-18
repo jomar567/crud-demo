@@ -5,16 +5,16 @@
         <div class="row position-relative">
             <h1 class="text-center"><strong>PRODUCTS</strong></h1>
             <a href={{ route('functions/createProduct') }}>
-                <button class="btn btn-md btn-primary px-4 float-end">Add new product</button>
+                <button class="btn btn-md btn-primary px-4 float-end mb-3">Add new product</button>
             </a>
         </div>
         @if (session('success'))
-            <div class="mb-3 alert alert-success" role="alert">
+            <div class="my-3 alert alert-success" role="alert">
                 {{ session('success') }}
             </div>
         @endif
         @if (session('success-delete'))
-            <div class="mb-3 alert alert-danger" role="alert">
+            <div class="my-3 alert alert-danger" role="alert">
                 {{ session('success-delete') }}
             </div>
         @endif
@@ -27,11 +27,11 @@
                         <th>Description</th>
                         <th>Price</th>
                         <th>Quantity</th>
-                        <th>Action</th>
+                        <th class="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @if(count($products) > 0)
+                    @if(isset($products) > 0)
                         @foreach($products as $product)
                             <tr>
                                 <th scope="row">{{ $product->id }}</th>
@@ -39,15 +39,13 @@
                                 <td>{{ $product->description }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>{{ $product->quantity }}</td>
-                                <td>
-                                    <div class="d-flex justify-content-end gap-2">
-                                        <a href={{ route('functions/showProduct', $product->id) }} class="btn btn-primary">View</a>
-                                        {{-- <a href={{ route('functions/edit', $product->id) }} class="btn btn-light">Edit</a> --}}
-                                        {{-- <form action={{ route('destroy', $product->id) }} method="POST">
-                                            @csrf
-                                            <button class="btn btn-danger">Delete</button>
-                                        </form> --}}
-                                    </div>
+                                <td class="d-flex flex-row gap-2 justify-content-center align-items-center">
+                                    <a href={{ route('functions/showProduct', $product->id) }} class="btn btn-info text-white">View</a>
+                                    <a href={{ route('functions/editProduct', $product->id) }} class="btn btn-primary">Edit</a>
+                                    <form action={{ route('destroy', $product->id) }} method="POST" class="d-inline-block">
+                                        @csrf
+                                        <button class="btn btn-danger">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

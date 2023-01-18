@@ -18,4 +18,7 @@ Route::get('/', [ProductController::class, 'index'])->name('index');
 Route::get('/createProduct', [ProductController::class, 'create'])->name('functions/createProduct');
 Route::post('/addNewProduct', [ProductController::class, 'store'])->name('addNewProduct');
 Route::get('/viewProduct/{id}', [ProductController::class, 'show'])->name('functions/showProduct');
+Route::get('/editProduct/{id}', [ProductController::class, 'edit'])->name('functions/editProduct');
+Route::post('/update/{id}', [ProductController::class, 'update'])->name('update');
+Route::post('/destroy/{id}', [ProductController::class, 'destroy'])->name('destroy');
 

@@ -7,7 +7,7 @@
                 Product Details
             </h1>
             <div>
-                <a href={{ route('index') }} class="btn btn-light">Go Back</a>
+                <a href={{ route('index') }} class="btn btn-info">Go Back</a>
             </div>
         </div>
         <div class="row">
