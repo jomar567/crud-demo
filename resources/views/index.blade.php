@@ -41,8 +41,8 @@
                                 <td>{{ $product->quantity }}</td>
                                 <td>
                                     <div class="d-flex justify-content-end gap-2">
-                                        {{-- <a href={{ route('functions/show', $product->id) }} class="btn btn-primary">View</a>
-                                        <a href={{ route('functions/edit', $product->id) }} class="btn btn-light">Edit</a> --}}
+                                        <a href={{ route('functions/showProduct', $product->id) }} class="btn btn-primary">View</a>
+                                        {{-- <a href={{ route('functions/edit', $product->id) }} class="btn btn-light">Edit</a> --}}
                                         {{-- <form action={{ route('destroy', $product->id) }} method="POST">
                                             @csrf
                                             <button class="btn btn-danger">Delete</button>

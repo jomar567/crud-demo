@@ -27,4 +27,11 @@ class ProductController extends Controller
 
         return redirect()->route('index')->with('success', 'New product added!');
     }
+
+    public function show(Request $request)
+    {
+        $product = Product::find($request->id);
+
+        return view('functions/showProduct')->with('product', $product);
+    }
 }
