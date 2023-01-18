@@ -12,7 +12,7 @@
         <div class="row position-relative">
             <h1 class="text-center"><strong>PRODUCTS</strong></h1>
             <a href="/newProductForm" class="mt-5">
-                <button class="btn btn-md btn-primary px-4 float-end w-25">Add new product</button>
+                <button class="btn btn-md btn-primary px-4 float-end">Add new product</button>
             </a>
         </div>
         <div class="row mt-5">
@@ -55,12 +55,10 @@
                                     </td>
                                     <td>
                                         <a href='/viewProduct?id={{ $product->id }}' style="text-decoration: none;">
-                                            <button class="btn bg-primary text-white mb-2 w-100">VIEW</button>
+                                            <button class="btn btn-info text-white mb-2">VIEW</button>
                                         </a>
-                                    </td>
-                                    <td>
                                         <a href='/updateProduct?id={{ $product->id }}' style="text-decoration: none;">
-                                            <button class="btn bg-primary text-white mb-2 w-100">EDIT</button>
+                                            <button class="btn bg-primary text-white mb-2">EDIT</button>
                                         </a>
                                     </td>
                                 </tr>
