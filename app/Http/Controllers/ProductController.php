@@ -8,12 +8,12 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function index() {
-        return view('welcome')->with('products', Product::orderByDesc('created_at')->get());
+        return view('index')->with('products', Product::orderByDesc('created_at')->get());
     }
 
     //Create New Product Form
     public function create() {
-        return view('newProduct');
+        return view('functions/createProduct');
     }
     //Create New Product
     public function store(Request $request) {
@@ -25,11 +25,6 @@ class ProductController extends Controller
         $product->quantity = $request->quantity;
         $product->save();
 
-        return redirect()->route('welcome')->with('success', 'New product added!');
-    }
-
-    //View Product
-    public function view() {
-        return view('newProduct');
+        return redirect()->route('index')->with('success', 'New product added!');
     }
 }

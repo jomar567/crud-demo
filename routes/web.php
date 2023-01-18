@@ -14,7 +14,7 @@ use App\Http\Controllers\ProductController AS ProductController;
 |
 */
 
-Route::get('/', [ProductController::class, 'index'])->name('welcome');
-Route::get('/newProductForm', [ProductController::class, 'create'])->name('create');
-Route::post('/addNewProduct', [ProductController::class, 'store']);
-Route::post('/viewProduct', [ProductController::class, 'show'])->name('view');
+Route::get('/', [ProductController::class, 'index'])->name('index');
+Route::get('/createProduct', [ProductController::class, 'create'])->name('functions/createProduct');
+Route::post('/addNewProduct', [ProductController::class, 'store'])->name('addNewProduct');
+// Route::post('/viewProduct', [ProductController::class, 'show'])->name('view');
