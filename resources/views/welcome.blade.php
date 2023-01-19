@@ -8,7 +8,6 @@
     <title>Product CRUD Laravel</title>
 </head>
 <body class="bg-dark-subtle">
-    {{-- @include('../components/nav') --}}
     <div class="container">
         @yield('content')
     </div>
