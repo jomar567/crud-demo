@@ -31,7 +31,7 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                    @if(isset($products) > 0)
+                    @if(count($products) > 0)
                         @foreach($products as $product)
                             <tr>
                                 <th scope="row">{{ $product->id }}</th>
